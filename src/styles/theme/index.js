@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-export const DrawerWidth = 250;
+// export const DrawerWidth = 250;
 
 export const Colors = {
   primary: "#5f2c3e",
@@ -32,10 +32,10 @@ export const Colors = {
 const theme = createTheme({
   palette: {
     primary: {
-      main: Colors.primary,
+      main: Colors.primary
     },
     secondary: {
-      main: Colors.secondary,
+      main: Colors.secondary
     },
   },
 
