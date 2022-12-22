@@ -1,8 +1,10 @@
 
-import { Button } from '@mui/material';
+import { Container } from '@mui/material';
 import{useEffect} from 'react';
 import  {ThemeProvider} from '@mui/system';
 import theme from './styles/theme';
+import Appbar from './components/appbar';
+import Banner from './components/banner';
 
 function App() {
 
@@ -13,10 +15,13 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-  <>
-  <Button> test</Button>
-  </>
+         <Container  disableGutters  maxWidth="xl"  sx={{  background: "#fff",}} >
+      
 
+  <Appbar />
+  <Banner/>
+  
+  </Container>
   </ThemeProvider>
   );
   
