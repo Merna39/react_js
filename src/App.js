@@ -6,6 +6,7 @@ import theme from './styles/theme';
 import Appbar from './components/appbar';
 import Banner from './components/banner';
 
+
 function App() {
 
   useEffect(() => {
@@ -18,9 +19,9 @@ function App() {
          <Container  disableGutters  maxWidth="xl"  sx={{  background: "#fff",}} >
       
 
-  <Appbar />
-  <Banner/>
-  
+  <Appbar></Appbar>
+  <Banner></Banner>
+
   </Container>
   </ThemeProvider>
   );
