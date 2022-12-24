@@ -28,8 +28,8 @@ function App() {
   <Appbar />
   <Banner/>
            <Promotions/>
-  <Box disply="flex" justifyContent={"center"} sx={{p:4}} >
-     <Typography variant = "h4">Our Products </Typography>
+  <Box display="flex" justifyContent={"center"} sx={{p:4}} >
+     <Typography variant = "h4"> Our Products </Typography>
   </Box>
   <Products/>
    <Footer />
