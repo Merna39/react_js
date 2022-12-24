@@ -17,12 +17,12 @@ export const Product = styled(Box)(({theme}) => ({
 export const ProductImage = styled("img")(({ src , theme}) => ({
 
     src : `url(${src})`,
-    width : "250px",
+    width : "300px",
     background : Colors.light_gray,
     padding : "0px",
     [theme.breakpoints.down("md")]:{
         width : "100%",
-        padding : "24px"
+        padding : "0px"
     }
 }));
 
