@@ -9,6 +9,7 @@ import Promotions from "./components/promotions";
 import Products from "./components/products";import Footer from './components/footer/indes';
 import AppDrawer from './components/drawer';
 import { UIProvider } from './context/Ui';
+import SearchBox from './components/search';
 
 
 
@@ -24,16 +25,7 @@ function App() {
     <ThemeProvider theme={theme}>
          <Container  disableGutters  maxWidth="xl"  sx={{  background: "#fff",}} >
       
-<<<<<<< HEAD
-       <Appbar></Appbar>
-       <Banner></Banner>
-       <Promotions></Promotions>
-  <Box disply="flex" justifyContent={"center"} sx={{p:4}} >
-     <Typography variant = "h4">Our Products </Typography>
-  </Box>
-  <Products></Products>
-=======
-
+<UIProvider>
   <Appbar />
   <Banner/>
            <Promotions/>
@@ -43,9 +35,8 @@ function App() {
   <Products/>
    <Footer />
   <AppDrawer />
-  
+  <SearchBox/>
   </UIProvider>    
->>>>>>> 620a7a6c1448f285cab44749591f53851a0e7d64
   
   </Container>
   </ThemeProvider>
