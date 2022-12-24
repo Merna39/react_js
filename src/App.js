@@ -6,7 +6,11 @@ import theme from './styles/theme';
 import Appbar from './components/appbar';
 import Banner from './components/banner';
 import Promotions from "./components/promotions";
-import Products from "./components/products";
+import Products from "./components/products";import Footer from './components/footer/indes';
+import AppDrawer from './components/drawer';
+import { UIProvider } from './context/Ui';
+
+
 
 
 function App() {
@@ -28,6 +32,10 @@ function App() {
      <Typography variant = "h4">Our Products </Typography>
   </Box>
   <Products/>
+   <Footer />
+  <AppDrawer />
+  
+  </UIProvider>    
   
   </Container>
   </ThemeProvider>
