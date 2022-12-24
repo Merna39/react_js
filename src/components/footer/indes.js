@@ -20,9 +20,7 @@ export default function Footer(){
                 <Grid item md={6} lg={4}>
                     <FooterTitle variant="body1">About Us</FooterTitle>
                     <Typography variant="caption2">
-                        Lorem ipsum dolor sit amet cons adipisicing elit sed do eisum
-                        tempor incididunt ut labor et dolore magna aliqua. ut enim ad
-                        minim veniam, quis nostrud.
+                    We are a group of girls who have a passion for accessories, we made this project in 2022
                     </Typography>
                     <Box sx={{
                         mt: 4,
@@ -99,7 +97,7 @@ export default function Footer(){
                             startIcon={<SendIcon sx={{ color: Colors.white }}  />}
                             sx={{mt: 4, mb: 4}} 
                             variant="contained">
-                            Subscribe
+                            Send
                         </Button>
                     </Stack>
                 </Grid>
