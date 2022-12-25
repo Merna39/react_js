@@ -10,7 +10,7 @@ import Products from "./components/products";import Footer from './components/fo
 import AppDrawer from './components/drawer';
 import { UIProvider } from './context/Ui';
 import SearchBox from './components/search';
-
+import Cart from './components/cart';
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
   <Products/>
    <Footer />
   <AppDrawer />
+  <Cart/>
   <SearchBox/>
   </UIProvider>    
   
