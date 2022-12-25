@@ -7,11 +7,11 @@ import ProductMeta from "./ProductMeta";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon  from "@mui/icons-material/FitScreen";
 import { useState } from "react";
-
+import useCart from "../../hooks/useCart";
 export default function SingleProductDesktop({product,matches}){
 
      const [showOptions, setShowOptions] = useState(false);
-
+     const { addToCart, addToCartText} = useCart(product);
      const handleMouseEnter =() => {
         setShowOptions(true);
      }
@@ -30,8 +30,11 @@ export default function SingleProductDesktop({product,matches}){
               <FavoriteIcon/>
             </ProductFavButton>  
 
-              {showOptions && (
-              <ProductAddToCart show={showOptions} variant="contined">
+            {showOptions && (
+              <ProductAddToCart 
+              onClick={addToCart}
+              show={showOptions} variant="contined">
+                {addToCartText}
               Add to Cart
               </ProductAddToCart>
               )}
