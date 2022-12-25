@@ -1,18 +1,30 @@
 import {Stack} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { Product, ProductActionButton,
-         ProductActionWrapper, ProductFavButton,
-         ProductImage, ProductAddToCart } from "../../styles/Products";
+import { Product,
+   ProductActionButton,
+         ProductActionWrapper,
+          ProductFavButton,
+         ProductImage,
+          ProductAddToCart
+         } from "../../styles/Products";
 import ProductMeta from "./ProductMeta";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon  from "@mui/icons-material/FitScreen";
-import { useState } from "react";
-import useCart from "../../hooks/useCart";
+import { useState,useEffect } from "react";
+
+import useDialogModal from "../../hooks/useDialogModal"
+import ProductDetail from"../productdetail";
+
 export default function SingleProductDesktop({product,matches}){
 
      const [showOptions, setShowOptions] = useState(false);
-     const [ProductDetailDialog,showProductDetailDialog,closeProductDetailDialog] 
-     = useDialogModal(ProductDetail);
+     const [ProductDetailDialog,
+      showProductDetailDialog,
+      closeProductDetailDialog 
+     ]= useDialogModal(ProductDetail);
+
+    //  const{addToCart,addToCartText}= useCart(product);
+
      const handleMouseEnter =() => {
         setShowOptions(true);
      }
@@ -31,28 +43,29 @@ export default function SingleProductDesktop({product,matches}){
               <FavoriteIcon/>
             </ProductFavButton>  
 
-            {showOptions && (
+            {(showOptions || matches) && (
               <ProductAddToCart 
-              onClick={addToCart}
               show={showOptions} variant="contined">
-                {addToCartText}
-              Add to Cart
+                Add to cart
+            
               </ProductAddToCart>
               )}
               
         
-        <ProductActionWrapper show ={showOptions}>
-          <Stack direction="column">
+        <ProductActionWrapper show ={showOptions || matches}>
+          <Stack direction={matches ? "row" : "column"}>
             <ProductActionButton>
               <ShareIcon color="primary"/>
-            </ProductActionButton onClick={()=>showProductDetailDialog()}>
-            <ProductActionButton>
+            </ProductActionButton>
+            <ProductActionButton onClick={()=>showProductDetailDialog()}>
               <FitScreenIcon color="primary"/>
             </ProductActionButton>   
           </Stack>
         </ProductActionWrapper>
     </Product>
+       
        <ProductMeta product={product} matches={matches}/>
+       <ProductDetailDialog product={product} />
       </>
     );
 }
