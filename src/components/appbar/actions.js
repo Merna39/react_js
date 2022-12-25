@@ -7,6 +7,8 @@ import { Colors } from "../../styles/theme";
 
 export default function Actions({matches}) {
 
+  const { cart, setShowCart } = useUIContext();
+
   const Component = matches 
   ? ActionIconsContainerMobile
   : ActionIconsContainerDesktop;
@@ -29,7 +31,10 @@ export default function Actions({matches}) {
           color:matches && Colors.light,
          }}
         >
-          <ShoppingCartIcon></ShoppingCartIcon>
+          <Badge badgeContent={cart && cart.length} color="secondary">
+           <ShoppingCartIcon onClick={() => setShowCart(true)}  />
+          </Badge>
+         
         </ListItemIcon>
       </ListItemButton>
       <Divider orientation = "vertical" flexItem />
