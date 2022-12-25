@@ -6,10 +6,11 @@ import { Product, ProductActionButton,
 import ProductMeta from "./ProductMeta";
 import ShareIcon from "@mui/icons-material/Share";
 import  FitScreenIcon  from "@mui/icons-material/FitScreen";
+import useCart from "../../hooks/useCart";
 
 export default function SingleProduct({product,matches}){
 
-
+    const { addToCart, addToCartText} = useCart(product);
     return (
       <>
       <Product>
@@ -30,7 +31,8 @@ export default function SingleProduct({product,matches}){
           </Stack>
         </ProductActionWrapper>
       </Product>
-      <ProductAddToCart variant="contained">Add to cart</ProductAddToCart>
+      <ProductAddToCart onClick ={addToCart} 
+      variant="contained">{addToCartText}</ProductAddToCart>
       </>
     )
 }
