@@ -10,7 +10,8 @@ import useCart from "../../hooks/useCart";
 
 export default function SingleProduct({product,matches}){
 
-    const { addToCart, addToCartText} = useCart(product);
+    const [ProductDetailDialog,showProductDetailDialog]//,closeProductDetailDialog
+    = useDialogModal(ProductDetail);
     return (
       <>
       <Product>
@@ -31,8 +32,8 @@ export default function SingleProduct({product,matches}){
           </Stack>
         </ProductActionWrapper>
       </Product>
-      <ProductAddToCart onClick ={addToCart} 
-      variant="contained">{addToCartText}</ProductAddToCart>
+<ProductAddToCart variant="contained">Add to cart</ProductAddToCart>
+      <ProductDetailDialog product={product}/>
       </>
     )
 }
