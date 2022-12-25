@@ -11,7 +11,8 @@ import useCart from "../../hooks/useCart";
 export default function SingleProductDesktop({product,matches}){
 
      const [showOptions, setShowOptions] = useState(false);
-     const { addToCart, addToCartText} = useCart(product);
+     const [ProductDetailDialog,showProductDetailDialog,closeProductDetailDialog] 
+     = useDialogModal(ProductDetail);
      const handleMouseEnter =() => {
         setShowOptions(true);
      }
@@ -44,7 +45,7 @@ export default function SingleProductDesktop({product,matches}){
           <Stack direction="column">
             <ProductActionButton>
               <ShareIcon color="primary"/>
-            </ProductActionButton>
+            </ProductActionButton onClick={()=>showProductDetailDialog()}>
             <ProductActionButton>
               <FitScreenIcon color="primary"/>
             </ProductActionButton>   
