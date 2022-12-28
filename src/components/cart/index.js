@@ -1,10 +1,13 @@
-import {  Drawer } from "@mui/material" ;
+import {  Drawer , useMediaQuery } from "@mui/material" ;
 import { useUIContext } from "../../context/Ui";
 import { Colors } from "../../styles/theme" ;
+import { useTheme } from "@mui/material/styles"
 
 export default function Cart() {
 
-    const  { cart , showCart  }  = useUIContext() ;
+    const [ cart , showCart , setShowCart ]= useUIContext() ;
+    const theme = useTheme() ;
+    const matches = useMediaQuery(theme.breakpoints.down("md"));) ;
     
     return (
         <Drawer 
