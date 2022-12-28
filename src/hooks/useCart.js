@@ -1,4 +1,4 @@
-
+import { useUIContext } from "../context/Ui" ;
 
 function useCart(product){
     const [ cart , setCart]= useUIContext() ;
