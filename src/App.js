@@ -11,7 +11,7 @@ import Footer from './components/footer/indes';
 import AppDrawer from './components/drawer';
 import { UIProvider } from './context/Ui';
 import SearchBox from './components/search';
-
+import Auth from './Auth';
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
       
     <ThemeProvider theme={theme}>
          <Container  disableGutters  maxWidth="xl"  sx={{  background: "#fff",}} >
-      
+      <Auth/>
 <UIProvider>
   <Appbar />
   <Banner/>
