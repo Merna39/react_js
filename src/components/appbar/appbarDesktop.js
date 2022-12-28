@@ -11,7 +11,12 @@ return(
 // list
 
  <AppbarContainer>
-   <AppbarHeader>Glitter</AppbarHeader>
+   <AppbarHeader
+   sx={{
+    color:"#d03e71"
+   }
+
+   }>Glitter</AppbarHeader>
    <MyList type="row">
         <ListItemText primary="Home" />
         <ListItemText primary="Categories" />

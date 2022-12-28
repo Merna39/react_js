@@ -19,7 +19,7 @@ export const AppbarHeader = styled(Typography)(() => ({
   flexGrow: 1,
   fontSize: "5em",
   fontFamily: '"Montez", "cursive"',
-  color: Colors.secondary,
+  // color:"#c533b4",
 
 }));
 

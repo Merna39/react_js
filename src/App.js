@@ -16,7 +16,7 @@ import SearchBox from './components/search';
 function App() {
 
   useEffect(() => {
-    document.title ="React Material UI - Home";
+    document.title ="React Material UI";
   
 
   }, []);

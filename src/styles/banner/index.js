@@ -62,7 +62,8 @@ export const BannerShopButton = styled(Button, {
   slot:"Root",
   overridesResolver:(props,styles) => [
     styles.root,
-    props.color === "primary" && styles.primary,
+  
+    props.color === "primary"  && styles.primary,
     props.color === "secondary" && styles.secondary,
   ],
 })(({thme}) =>({

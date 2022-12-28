@@ -14,9 +14,12 @@ export default function AppbarMobile({ matches }) {
       <IconButton onClick={() => setDrawerOpen(true)} >
         <MenuIcon />
       </IconButton>
-      <AppbarHeader textAlign={"center"} variant="h5">
-        Glitter
-      </AppbarHeader>
+      <AppbarHeader 
+      textAlign={"center"} variant="h5" 
+      sx={{
+        color:"#d03e71"
+      }}
+        > Glitter</AppbarHeader>
       <IconButton onClick={() => setShowSearchBox(true)}>
         <SearchIcon />
       </IconButton>
