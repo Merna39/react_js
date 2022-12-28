@@ -11,7 +11,6 @@ import Footer from './components/footer/indes';
 import AppDrawer from './components/drawer';
 import { UIProvider } from './context/Ui';
 import SearchBox from './components/search';
-import Cart from "./components/cart";
 
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
   <Products/>
    <Footer />
   <AppDrawer />
-  <Cart />
+  
   <SearchBox/>
   </UIProvider>    
   
